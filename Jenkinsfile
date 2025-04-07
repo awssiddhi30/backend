@@ -9,7 +9,7 @@ pipeline{
      }
      environment {
         DEBUG = 'true'
-        appversion = ''
+        appVersion = ''
      }
      stages {
         stage('Read the version') {
