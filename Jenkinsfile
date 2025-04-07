@@ -32,7 +32,7 @@ pipeline{
             
             steps {
                sh """
-               docker build -t siri30/backend:${appVersion}
+               docker build -t siri30/backend:${appVersion} .
                docker images
                """
 
