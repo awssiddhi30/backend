@@ -28,13 +28,13 @@ pipeline{
                
             }
         }
-        stage('Deploy') {
-            when {
-                expression { env.GIT_BRANCH != "origin/main" }
-            }
+        stage('Docker build') {
+            
             steps {
-               sh 'echo Deploying...'
-               //error 'pipeline failed'
+               sh """
+               docker build -t siri30/backend:${appVersion}
+               docker images
+               """
 
             }
         }
